@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\phanh4\OneDrive - Wentworth Institute of Technology\Desktop\CPP_Python\cpp_to_python\main.cpp(42,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\phanh4\OneDrive - Wentworth Institute of Technology\Desktop\CPP_Python\cpp_to_python\main.cpp(69,28): error C3861: 'get_current_timestamp': identifier not found
