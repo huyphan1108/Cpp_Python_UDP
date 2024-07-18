@@ -64,11 +64,13 @@ int main() {
         cout << "Enter message to send (or 0 to exit): ";
         cin >> message;
 
+        send_udp_message(server_ip, server_port, message.c_str());
+
         if (message == "0") {
             break;
         }
 
-        send_udp_message(server_ip, server_port, message.c_str());
+        
     }
 
     cleanup_winsock();
