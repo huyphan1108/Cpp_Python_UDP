@@ -23,10 +23,6 @@ def delay_plot():
     sent_times_dt = [datetime.strptime(time, '%S.%f') for time in sent_times]
     received_times_dt = [datetime.strptime(time, '%S.%f') for time in received_times]
 
-    # x-axis label pattern
-    x_labels = ['right', 'left', 'front', 'back', 'off'] * (len(sent_times) // 5 + 1)
-    x_labels = x_labels[:len(sent_times)]
-
     # index for the x-axis
     x_ind = np.arange(len(sent_times))
     # print(x_labels)
@@ -35,7 +31,6 @@ def delay_plot():
     plt.figure(figsize=(12, 6))
     plt.plot(x_ind, sent_times_dt, label='Sent Time')
     plt.plot(x_ind, received_times_dt, label='Received Time', linestyle='--')
-    plt.xticks(ticks=x_ind, labels=x_labels, rotation=45)
     plt.xlabel('Data')
     plt.ylabel('Time')
     plt.title('UDP Sent Time vs. Received Time')
@@ -44,16 +39,16 @@ def delay_plot():
     plt.tight_layout()
     plt.show()
 
+
     plt.figure(figsize=(12, 6))
     plt.plot(x_ind, ble_sent, label='BLE Sent')
     plt.plot(x_ind, ble_received, label='BLE Received', linestyle='--')
-    plt.xticks(ticks=x_ind, labels=x_labels, rotation=45)
     plt.xlabel('Data')
     plt.ylabel('Value')
     plt.title('BLE Sent vs BLE Received')
     plt.legend()
     plt.grid(True)
     plt.show()
-
+    
 
 delay_plot()
