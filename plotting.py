@@ -49,6 +49,6 @@ def delay_plot():
     plt.legend()
     plt.grid(True)
     plt.show()
-    
+
 
 delay_plot()
