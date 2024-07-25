@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-db_path = os.path.join(BASE_DIR, "testing.db")
+db_path = os.path.join(BASE_DIR, "testing1.db")
 con = sqlite3.connect(db_path)
 cur = con.cursor()
 

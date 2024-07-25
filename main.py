@@ -47,8 +47,8 @@ async def main():
         if client_r.is_connected and client_l.is_connected:
             print(f"Connected to {eps32_r_addr} and {esp32_l_addr}")
             while True:
-                data, addr = sock.recvfrom(1024)  # get data from Unity
-                sent_time, addr = sock.recvfrom(1024)
+                data, addr = sock.recvfrom(1024)  # get data from cpp
+                sent_time, addr = sock.recvfrom(1024)  # get sent time from cpp
                 received_data = data.decode('utf-8')  # decode the data
                 sent_time = sent_time.decode('utf-8')  # decode the sent_time
                 # print("Sent data: ", received_data, "at", sent_time)
