@@ -1,0 +1,5 @@
+asyncio==3.4.3
+bleak==0.21.1
+pandas==2.2.2
+matplotlib==3.7.2
+numpy==1.25.2

@@ -18,7 +18,7 @@ L_CONNECT_UUID = "f41062a5-5f5b-431e-b595-42e3bc5e5880"
 
 # Bind the socket to an address and port
 server_ip = "192.168.56.1"  # IP address to bind to
-server_port = 8888      # Port to bind to
+server_port = 8888  # Port to bind to
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.bind((server_ip, server_port))
@@ -48,9 +48,9 @@ async def main():
             print(f"Connected to {eps32_r_addr} and {esp32_l_addr}")
             while True:
                 data, addr = sock.recvfrom(1024)  # get data from Unity
+                sent_time, addr = sock.recvfrom(1024)
                 received_data = data.decode('utf-8')  # decode the data
-                # sent_time, addr = sock.recvfrom(1024)  # get sent time from Unity
-                # sent_time = sent_time.decode('utf-8')  # decode the sent_time
+                sent_time = sent_time.decode('utf-8')  # decode the sent_time
                 # print("Sent data: ", received_data, "at", sent_time)
                 # print("Received data:", received_data)
                 now = datetime.now()  # get received time
@@ -103,11 +103,10 @@ async def main():
                     # delay_time = round(rect_time - start_time, 6)
                     # delay = str(delay_time)
 
-                '''
                 cur.execute("INSERT INTO DelayTest VALUES "
                             "('" + received_data + "','" + sent_time + "','" + received_time + "'," + start_time + "," + rec_time + ")")
                 con.commit()
-                '''
+
 
     except Exception as e:
         print(e)
