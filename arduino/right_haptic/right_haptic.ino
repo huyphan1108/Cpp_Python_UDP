@@ -5,9 +5,9 @@
 #include "Adafruit_DRV2605.h"
 #include <Adafruit_NeoPixel.h>
 
-#define SERVICE_UUID        "19530ea1-daee-4dcc-9ff0-c250ce532a45"
-#define CHARACTERISTIC_UUID "2ae7a220-68b3-44c5-87ee-499c87a1af9f"
-#define CONNECTION_UUID     "e0a40515-bd0a-4cc6-9f1a-864727e48f1a"
+#define SERVICE_UUID        "1adc2787-3cfd-43be-a363-701bea5b59f9"
+#define CHARACTERISTIC_UUID "cfdef092-e196-440e-938e-981f97692a78"
+#define CONNECTION_UUID     "fe113624-8cd7-48f0-808e-ebb4f257ebd9"
 #define NUMPIXELS           1
 
 BLEServer* pServer = NULL;

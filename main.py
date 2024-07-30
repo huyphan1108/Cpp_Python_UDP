@@ -9,12 +9,12 @@ import time
 # effect list for esp32
 # https://cdn-shop.adafruit.com/datasheets/DRV2605.pdf
 
-eps32_r_addr = "4C:75:25:EE:C9:62"
-esp32_l_addr = "4C:75:25:EE:CA:3E"
-R_HAPTIC_UUID = "2ae7a220-68b3-44c5-87ee-499c87a1af9f"
-L_HAPTIC_UUID = "554dcf87-4dd4-4b90-a839-c66ceb8c4bb5"
-R_CONNECT_UUID = "e0a40515-bd0a-4cc6-9f1a-864727e48f1a"
-L_CONNECT_UUID = "f41062a5-5f5b-431e-b595-42e3bc5e5880"
+eps32_r_addr = "4C:75:25:EE:CA"
+esp32_l_addr = "4C:75:25:EE:C9:62"
+R_HAPTIC_UUID = "cfdef092-e196-440e-938e-981f97692a78"
+L_HAPTIC_UUID = "0a067d41-ceb0-4a41-a9f5-e5b805b39f13"
+R_CONNECT_UUID = "fe113624-8cd7-48f0-808e-ebb4f257ebd9"
+L_CONNECT_UUID = "cc719654-2db1-4c81-9047-fe8288ccd0e7"
 
 # Bind the socket to an address and port
 server_ip = "192.168.56.1"  # IP address to bind to
@@ -106,7 +106,6 @@ async def main():
                 cur.execute("INSERT INTO DelayTest VALUES "
                             "('" + received_data + "','" + sent_time + "','" + received_time + "'," + start_time + "," + rec_time + ")")
                 con.commit()
-
 
     except Exception as e:
         print(e)

@@ -5,9 +5,9 @@
 #include "Adafruit_DRV2605.h"
 #include <Adafruit_NeoPixel.h>
 
-#define SERVICE_UUID        "9e6afa43-7248-43e1-af0f-214099fc5c5e"
-#define CHARACTERISTIC_UUID "554dcf87-4dd4-4b90-a839-c66ceb8c4bb5"
-#define CONNECTION_UUID     "f41062a5-5f5b-431e-b595-42e3bc5e5880"
+#define SERVICE_UUID        "68d6e864-4010-4840-8a38-a5a288b085ad"
+#define CHARACTERISTIC_UUID "0a067d41-ceb0-4a41-a9f5-e5b805b39f13"
+#define CONNECTION_UUID     "cc719654-2db1-4c81-9047-fe8288ccd0e7"
 #define NUMPIXELS           1
 
 Adafruit_NeoPixel pixels(NUMPIXELS, PIN_NEOPIXEL, NEO_GRB + NEO_KHZ800);
