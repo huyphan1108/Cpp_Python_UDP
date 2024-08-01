@@ -9,7 +9,7 @@ import time
 # effect list for esp32
 # https://cdn-shop.adafruit.com/datasheets/DRV2605.pdf
 
-eps32_r_addr = "4C:75:25:EE:CA"
+eps32_r_addr = "4C:75:25:EE:CA:3E"
 esp32_l_addr = "4C:75:25:EE:C9:62"
 R_HAPTIC_UUID = "cfdef092-e196-440e-938e-981f97692a78"
 L_HAPTIC_UUID = "0a067d41-ceb0-4a41-a9f5-e5b805b39f13"
